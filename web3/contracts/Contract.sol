@@ -73,5 +73,5 @@ contract Contract {
         }
 
         return allCampaigns;
-    }
+    } 
 }
