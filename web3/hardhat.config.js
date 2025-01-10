@@ -13,8 +13,8 @@ module.exports = {
   },
   networks: {
     zksync_testnet: {
-      url: "https://zksync2-testnet.zksync.dev",
-      ethNetwork: "goerli",
+      url: "https://testnet.era.zksync.dev",
+      ethNetwork: "sepolia",
       chainId: 280,
       zksync: true,
     },
