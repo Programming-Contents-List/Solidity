@@ -4,7 +4,7 @@ coverage
 coverage.json
 typechain
 typechain-types
-.Contract.sol
+web3/contracts/Contract.sol
 #Hardhat files
 cache*
 artifacts*
