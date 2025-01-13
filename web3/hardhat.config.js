@@ -12,6 +12,11 @@ module.exports = {
     },
   },
   networks: {
+    hardhat:{},
+    sepolia:{
+      url: 'https://rpc.ankr.com/eth_sepolia',
+      accounts:[`0x${process.env.PRIVATE_KEY}`]
+    },
     zksync_testnet: {
       url: "https://testnet.era.zksync.dev",
       ethNetwork: "sepolia",
@@ -31,6 +36,7 @@ module.exports = {
     sources: "./contracts",
     tests: "./test",
   },
+  defaultNetwork: 'sepolia',
   solidity: {
     version: "0.8.17",
     settings: {
