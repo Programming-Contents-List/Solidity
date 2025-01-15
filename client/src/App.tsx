@@ -21,6 +21,11 @@ function App() {
           <img src={reactLogo} className="logo react" alt="React logo" />
         </a>
       </div>
+      <div className="flex items-center justify-center h-screen bg-gradient-to-r from-blue-500 to-purple-600">
+        <h1 className="text-4xl font-bold text-white">
+          Tailwind CSS 적용 완료! 🚀
+        </h1>
+      </div>
       <h1>Vite + React</h1>
       <div className="card">
         <button onClick={() => setCount((count) => count + 1)}>
