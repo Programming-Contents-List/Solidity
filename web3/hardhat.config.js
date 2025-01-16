@@ -1,3 +1,4 @@
+require("dotenv").config();
 require("@matterlabs/hardhat-zksync-solc");
 
 /** @type import('hardhat/config').HardhatUserConfig */
@@ -12,9 +13,14 @@ module.exports = {
     },
   },
   networks: {
+    hardhat: {},
+    sepolia: {
+      url: "https://rpc.ankr.com/eth_sepolia",
+      accounts: [process.env.PRIVATE_KEY],
+    },
     zksync_testnet: {
-      url: "https://zksync2-testnet.zksync.dev",
-      ethNetwork: "goerli",
+      url: "https://testnet.era.zksync.dev",
+      ethNetwork: "sepolia",
       chainId: 280,
       zksync: true,
     },
@@ -31,8 +37,10 @@ module.exports = {
     sources: "./contracts",
     tests: "./test",
   },
+  defaultNetwork: "sepolia",
   solidity: {
     version: "0.8.17",
+    defaultNetwork: "sepolia",
     settings: {
       optimizer: {
         enabled: true,
