@@ -1,5 +1,9 @@
 require("dotenv").config();
-require("@matterlabs/hardhat-zksync-solc");
+require("@matterlabs/hardhat-zksync-solc"); // zkSync compiler
+require("@nomiclabs/hardhat-waffle");
+require("@nomiclabs/hardhat-ethers");
+
+console.log("Private Key:", process.env.PRIVATE_KEY ? "Loaded" : "Not Loaded");
 
 /** @type import('hardhat/config').HardhatUserConfig */
 module.exports = {
